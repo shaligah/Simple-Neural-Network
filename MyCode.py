@@ -133,14 +133,6 @@ def saveweights():
         p = csv.writer(file,delimiter=',')
         p.writerows(weights)
    
-#creating a function tha calls the saved weights from the NN for implementation into Lunar Landing game 
-def weightsfunc():
-    with open('Final weights.csv', 'r', newline= '') as filename:
-        data = list(csv.reader(filename, delimiter=',', quoting=csv.QUOTE_NONNUMERIC))
-        for i in range(len(first_layer)):
-            first_layer[i].weights = data[i]
-            for j in range(len(second_layer)):
-                second_layer[j].weights = data[len(first_layer)+j]
 
 
 
